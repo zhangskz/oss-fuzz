@@ -74,7 +74,7 @@ git checkout 946a41a51f44207941b3729a0733dfc1e236644e
 LLVM_SRC=$SRC/llvm-project
 
 # For manual bumping.
-OUR_LLVM_REVISION=llvmorg-14-init-7378-gaee49255
+OUR_LLVM_REVISION=llvmorg-15-init-17529-ga210f404
 
 # To allow for manual downgrades. Set to 0 to use Chrome's clang version (i.e.
 # *not* force a manual downgrade). Set to 1 to force a manual downgrade.
