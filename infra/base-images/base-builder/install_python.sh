@@ -19,5 +19,7 @@ echo "ATHERIS INSTALL"
 unset CFLAGS CXXFLAGS
 # PYI_STATIC_ZLIB=1 is needed for installing pyinstaller 5.0
 export PYI_STATIC_ZLIB=1
-LIBFUZZER_LIB=/usr/local/lib/clang/15.0.0/lib/x86_64-unknown-linux-gnu/libclang_rt.fuzzer.a pip3 install -v --no-cache-dir "atheris>=2.0.6" "pyinstaller==5.0.1" "coverage==6.3.2"
+# Uncomment this if we need to specify the clang-15 location of libFuzzer.
+# CLANG_BIN=$(which clang) LIBFUZZER_LIB=/usr/local/lib/clang/15.0.0/lib/x86_64-unknown-linux-gnu/libclang_rt.fuzzer_no_main.a
+pip3 install -v --no-cache-dir "atheris>=2.0.6" "pyinstaller==5.0.1" "coverage==6.3.2"
 rm -rf /tmp/*
