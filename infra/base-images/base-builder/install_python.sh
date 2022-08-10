@@ -21,5 +21,11 @@ unset CFLAGS CXXFLAGS
 export PYI_STATIC_ZLIB=1
 # Uncomment this if we need to specify the clang-15 location of libFuzzer.
 # CLANG_BIN=$(which clang) LIBFUZZER_LIB=/usr/local/lib/clang/15.0.0/lib/x86_64-unknown-linux-gnu/libclang_rt.fuzzer_no_main.a
-pip3 install -v --no-cache-dir "atheris>=2.0.6" "pyinstaller==5.0.1" "coverage==6.3.2"
+pip3 install -v --no-cache-dir "pyinstaller==5.0.1" "coverage==6.3.2"
+git clone https://github.com/google/atheris
+cd atheris
+git checkout 0cfd3c7e0cb1eca4580e796a008d36a67ed5ad75
+LIBFUZZER_LIB=/usr/local/lib/clang/15.0.0/lib/x86_64-unknown-linux-gnu/libclang_rt.fuzzer_no_main.a pip3 install .
+cd -
+rm -rf atheris
 rm -rf /tmp/*
