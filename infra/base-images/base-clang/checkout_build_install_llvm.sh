@@ -52,7 +52,7 @@ if [ -n "$INTROSPECTOR_PATCHES" ]; then
 fi
 
 # For manual bumping.
-OUR_LLVM_REVISION=llvmorg-15-init-17529-ga210f404
+OUR_LLVM_REVISION=llvmorg-15-init-1464-gbf7f8d6f
 
 mkdir $SRC/chromium_tools
 cd $SRC/chromium_tools
