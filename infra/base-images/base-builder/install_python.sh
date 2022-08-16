@@ -25,7 +25,8 @@ pip3 install -v --no-cache-dir "pyinstaller==5.0.1" "coverage==6.3.2"
 git clone https://github.com/google/atheris
 cd atheris
 git checkout 0cfd3c7e0cb1eca4580e796a008d36a67ed5ad75
-LIBFUZZER_LIB=/usr/local/lib/clang/15.0.0/lib/x86_64-unknown-linux-gnu/libclang_rt.fuzzer_no_main.a pip3 install .
+# Not needed until Clang is rolled: LIBFUZZER_LIB=/usr/local/lib/clang/15.0.0/lib/x86_64-unknown-linux-gnu/libclang_rt.fuzzer_no_main.a
+pip3 install .
 cd -
 rm -rf atheris
 rm -rf /tmp/*
